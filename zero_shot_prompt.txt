@@ -1,0 +1,18 @@
+function toSnakeCase(text) {
+    return text
+        // Replace any non-alphanumeric characters with spaces
+        .replace(/[^a-zA-Z0-9]/g, ' ')
+        // Convert to lowercase
+        .toLowerCase()
+        // Replace multiple spaces with a single space
+        .replace(/\s+/g, ' ')
+        // Trim spaces from start and end
+        .trim()
+        // Replace spaces with underscores
+        .replace(/\s/g, '_');
+}
+
+// Example usage:
+// toSnakeCase("Hello World") => "hello_world"
+// toSnakeCase("This-is-a_test") => "this_is_a_test"
+// toSnakeCase("camelCaseText") => "camel_case_text"
